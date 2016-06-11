@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.example.android.sunshine.app">
+    <PreferenceCategory android:title="@string/general_settings_header">
+        <com.example.android.sunshine.app.LocationEditTextPreference
+            android:defaultValue="@string/pref_location_default_value"
+            android:inputType="text"
+            android:key="@string/pref_location_key"
+            android:singleLine="true"
+            android:title="@string/pref_location_label"
+            custom:minLength="3" />
+        <ListPreference
+            android:defaultValue="@string/pref_units_default_value"
+            android:entries="@array/units_array"
+            android:entryValues="@array/units_array"
+            android:key="@string/pref_units_key"
+            android:title="@string/pref_units_label" />
+        <ListPreference
+            android:defaultValue="@string/pref_art_pack_sunshine"
+            android:entries="@array/pref_art_pack_options"
+            android:entryValues="@array/pref_art_pack_values"
+            android:key="@string/pref_art_pack_key"
+            android:title="@string/pref_art_pack_label" />
+        <CheckBoxPreference
+            android:defaultValue="@string/pref_enable_notifications_default"
+            android:key="@string/pref_enable_notifications_key"
+            android:summaryOff="@string/pref_enable_notifications_false"
+            android:summaryOn="@string/pref_enable_notifications_true"
+            android:title="@string/pref_enable_notifications_label" />
+    </PreferenceCategory>
+</PreferenceScreen>
